@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<!--
+    COPYRIGHT LICENSE: This information contains sample code provided in source code form. You may copy, modify, and distribute
+    these sample programs in any form without payment to IBM® for the purposes of developing, using, marketing or distributing
+    application programs conforming to the application programming interface for the operating platform for which the sample code is written.
+    Notwithstanding anything to the contrary, IBM PROVIDES THE SAMPLE SOURCE CODE ON AN "AS IS" BASIS AND IBM DISCLAIMS ALL WARRANTIES,
+    EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, SATISFACTORY QUALITY,
+    FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT. IBM SHALL NOT BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF THE SAMPLE SOURCE CODE.
+    IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.
+-->
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>RememberMe</title>
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    		<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    		-->
+    		<link rel="stylesheet" href="css/main.css">
+    		<script>window.$ = window.jQuery = WLJQ;</script>
+    	</head>
+    	<body style="display: none;">
+    		<!--application UI goes here-->
+    		<div id="header">
+				<h1>Remember Me</h1>
+			</div>
+
+    		<div id="wrapper">
+	    		<div id="AppDiv">
+	            	<input type="button" id="getSecretDataButton" value="Get secret data" onclick="getSecretData()" />
+	            	<input type="button" class="appButton" value="Logout" onclick="logout()" />
+	            	<div id="ResponseDiv"></div>
+	        	</div>
+
+	        	<div id="AuthDiv" style="display:none">
+	        		<p id="AuthInfo"></p>
+	       			<input type="text" placeholder="Enter username" id="AuthUsername"/><br />
+	       			<input type="password" placeholder="Enter password" id="AuthPassword"/><br />
+	       			<br/>
+	       			<label><input type="checkbox" value="true" id="rememberMe" name="rememberme"/> Remember Me</label><br/>
+	       			<br/>
+	       			<input type="button" class="formButton" value="Submit" id="AuthSubmitButton" />
+	       			<input type="button" class="formButton" value="Cancel" id="AuthCancelButton" />
+	        	</div>
+        	</div>
+    		<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/challengeHandler.js"></script>
+    		<script src="js/messages.js"></script>
+    	</body>
+</html>
